@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
 
+app.get("/", function (req, res) {
+    res.json({
+        message: `Hello world`,
+        url: `https://github.com/Commit451/LabCoat-API`
+    });
+});
+
 /**
  * Setup API Router
  */
