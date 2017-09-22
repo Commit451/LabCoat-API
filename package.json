@@ -1,9 +1,5 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-
-  "name": "LabCoat API",
+  "name": "LabCoatAPI",
   "version": "0.0.1",
   "description": "LabCoat API server",
   "main": "server.js",
@@ -12,20 +8,18 @@
   },
   "dependencies": {
     "express": "^4.15.3",
-    "http-proxy-middleware": "^0.17.4",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.1"
+    "http-proxy-middleware": "^0.17.4"
   },
   "engines": {
-    "node": "6.10.x"
+    "node": "8.1.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/Commit451/LabCoat-API"
   },
   "license": "MIT",
   "keywords": [
-    "node",
-    "glitch",
-    "express"
+    "labcoat",
+    "gitlab",
+    "api"
   ]
 }

@@ -1,25 +1,26 @@
 const express = require('express');
-const proxy = require('http-proxy-middleware');
-const pkg = require('./package.json')
-const contApiProxy = require('./api/contributors.js')
 const app = express();
 
 /**
  * Setup API Router
  */
-var apiRouter = express.Router();
+const apiRouter = express.Router();
 apiRouter.get('/', function (req, res) {
     res.json({
         message: `LabCoat API`,
-        version: `LabCoat API v${pkg.version}`,
-        url: pkg.repository.url
+        url: `https://github.com/Commit451/LabCoat-API`
     });
 });
 
-apiRouter.use('/contributors', contApiProxy);
+// the id of the element within the webpage to look for
+apiRouter.get('/login-element-id', function (req, res) {
+    res.json({
+        "elementId": `private-token`,
+    });
+});
 
 // API Router
-app.use('/api', apiRouter);
+app.use('/api/v1', apiRouter);
 
 const server = app.listen(process.env.PORT || 3000, function () {
     console.log('Listening on port ' + server.address().port);
